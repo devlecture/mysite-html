@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/* main#board 이후 */
+/* 
+main#board
+---
+    #board #main-top-box (제목+위치) 
+    #board #board-list(XXX) (메인 컨텐츠, 검색버튼...리스트....페이징...)  <--
+    #board #main-bottom-box (버튼들) <--
+ */
+
+
+/* ----------------------------------------------------------------- */ 
+/* 리스트 외곽 id변경해서 공통으로 사용 */
+#board #board-list, #board #board-writeForm { 
+    padding: 30px 0px 5px 0px; 
+}
+/* ----------------------------------------------------------------- */
+/* 리스트------------------------------------------------------------ */
+/* ----------------------------------------------------------------- */
+
+/* 리스트 상단*/
+#board #board-list #serach-box { /* 리스트 상단 검색+버튼 외곽 */
+    width: 100%;
+    padding: 0px 0px 5px 0px;
+    float: left;
+}
+#board #board-list #serach-box .search-wrap {/* 리스트상단 검색영역 */
+    float: left; 
+    padding: 9px 0px 0px 0px; 
+}
+#board #board-list #serach-box .btn-wrap {/* 리스트상단 버튼영역 */
+    float: right;
+}
+
+#text-keyword { /* 검색창 */
+    height: 32px;
+    border: 1px solid #a6a6a6;     
+    font-size: 15px;
+}
+
+#btn-search { /* 검색버튼 */
+    padding: 7px 10px 7px 10px; 
+    background-color: #f3f3f3;
+    border: 1px solid #a6a6a6; 
+    border-radius: 2px; 
+    font-size: 12px; 
+    vertical-align: bottom; /* 인라인에서만 가능 */
+    cursor: pointer;
+}
+
+#btn-write { /* 글쓰기 버튼 */
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #12b560; 
+    background-color: #12b560;
+    border-radius: 2px; 
+    font-size: 15px; 
+    color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------- */
+/* 리스트 메인 */
+table {width: 100%; } /* 테이블 가로폭 */
+
+table>thead>tr { /* 해더영역 가로선+배경회색 */
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #a6a6a6;
+    background-color: #f3f3f3;
+}
+table>thead>tr>th { /* 해더영역 글씨및 여백 */
+    height: 45px;
+    vertical-align: middle; /* 테이블하고 인라인요소에서만 작동 */
+    font-weight: bold;    
+}
+table>tbody>tr>td { /* 데이터 영역 여백 */
+    height: 45px;
+    vertical-align: middle; /* 테이블하고 인라인요소에서만 작동 */
+}
+table>tbody>tr { /* 데이터 영역 아래선 */
+    border-bottom: 1px solid #808080;
+}
+
+a.btn-del {
+    display: inline-block;   /* a태그는 인라인 상하패딩이 겹친다->inline-block */
+    padding: 5px 5px 5px 5px; /* 클릭영역 넓어짐 */
+    background-color: #f3f3f3;
+    border: 1px solid #a6a6a6; 
+    border-radius: 2px; 
+    font-size: 12px; 
+}
+
+/* ----------------------------------------------------------------- */
+/* 리스트하단 페이징 영역*/
+#paging {
+    padding: 10px 0px 0px 0px;
+}
+#paging ul {
+    margin: 0 auto;
+    display: inline-block; /* 가운데 정렬을 위해서 */
+}
+
+#paging ul>li {
+    float: left;
+}
+
+#paging ul>li>a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: -1px; /* 겹치는 줄 처리 */
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+#paging ul>li>a.active {
+    color: #12b560;
+    font-weight: bold;
+    background-color: #f3f3f3;
+}
+
+
+
+/* ----------------------------------------------------------------- */
+/* 글쓰기폼---------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
+#board #board-writeForm form .form-wrap { /* 아래여백 */
+    width: 820px;
+    padding: 0px 0px 10px 0px; 
+}
+
+#board #board-writeForm form .form-wrap .form-text {
+    display: inline-block;
+    width: 50px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#board #board-writeForm form .form-wrap #text-title {
+    width: 765px;
+}
+
+#board #board-writeForm form .form-wrap #txt-content {
+    width: 819px;
+    height: 300px;
+}
+
+#board #board-writeForm form .form-wrap #btn-add {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #12b560;
+    background-color: #12b560;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #f0f0f0;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#board #board-writeForm form .form-wrap #btn-cancel {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #12b560;
+    background-color: #ffffff;
+    border-radius: 2px;
+    font-size: 15px;
+    color: #12b560;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}

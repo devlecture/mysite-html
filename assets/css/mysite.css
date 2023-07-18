@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@import url(./reset.css);
+/* clearfix */
+.clearfix{zoom:1;}
+.clearfix:after {display: block; content: ""; clear: both;}
+
+/* 링크태그 */
+a:link      {text-decoration: none; color: #000000; }
+a:visited   {text-decoration: none; color: #000000; }
+a:active    {text-decoration: none; }
+a:hover     {text-decoration: none; }
+
+
+/* txt 관련 */
+.bold {font-weight: bold;}
+.text-center {text-align: center; }
+.text-right {text-align: right; }
+.text-left {text-align: left; }
+
+input[type=text], input[type=password] {
+    margin: 0px 0px 0px 0px;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;;
+    font-family: inherit;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+textarea {
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+/* 버튼 관련 */
+
+
+/* 제목 관련 */
+
+/* ------------------------------------------------------------- */
+
+/* 문서 초기화 */
+body {
+    font-family: "맑은 고딕", 돋움, 굴림; 
+    font-size:14px; 
+    color: #000000; 
+    text-align:center; 
+    line-height: 1.2;
+    overflow-y:scroll;
+}
+
+/* 제목 태그 */
+/* h1, h2, h3, h4, h5, h6 {font-weight: normal; font-size: inherit; } */
+
+
+/* 전체 레이아웃(가로크기, 위치, 색 선, 내부패딩)/* content 2단 레이어일때 -----------------------------------------------------------*/
+/* 전체묶음 */
+#container
+/* 해더 */                       {width: 1000px; margin: 0 auto; }   
+#container header               {background-color: #ffffff; }
+/* 컨텐츠 1단 */
+#container #content-full        {padding: 40px 20px 80px 20px; background-color: #ffffff;}
+#container #content-full>main   {width: 100%; } 
+/* 컨켄츠 2단 */
+#container #content             {padding: 40px 0px 40px 0px; background-color: #ffffff;}
+#container #content>aside       {float: left; width: 160px; }
+#container #content>main        {float: left; width: 820px; padding: 0px 0px 0px 20px; }
+/* 푸터 */
+#container footer               {padding: 20px 0px 20px 0px; background-color: #dddddd; border-top: 1px solid #a6a6a6; }
+
+
+/* 해더(로고+유틸, 네비게이션) --------------------------------------------------------------------------------------------------*/
+/* 해더 > 상단 */
+header #logo-util-box           {padding: 15px 0px 10px 0px; border-bottom: 1px solid #a6a6a6; } 
+/* 해더 > 상단 > 로고 */
+header #logo-util-box>h1        {float: left; color: #12B560; font-size: 40px; font-weight: bold; }
+/* 해더 > 상단 > 유틸 */
+header #logo-util-box>ul        {float: right; padding: 25px 0px 0px 0px; }
+header #logo-util-box>ul>li     {float: left; padding: 0px 0px 0px 10px; } /* 버튼 왼쪽 간격 */
+header #logo-util-box>ul>li>a   {/* 유틸 버튼 */
+    display: inline-block;   /* a태그는 인라인 상하패딩이 겹친다->inline-block */
+    padding: 5px 10px 5px 10px; /* 클릭영역 넓어짐 */
+    background-color: #f3f3f3;
+    border: 1px solid #a6a6a6; 
+    border-radius: 2px; 
+    font-size: 12px; 
+}
+
+/* 해더 > 상단 > 유틸(로그인시 인사말) */
+header #logo-util-box>ul>li.hello     {padding: 6px 0px 0px 0px; }
+
+/* 해더 > nav(메인 메뉴 gnb) */
+header nav      {border-bottom: 1px solid #a6a6a6; } 
+header nav>ul>li {
+    float: left;
+    width: 248px;
+    height: 57px;
+}
+header nav>ul>li>a { /* 가로 150px만큼 클릭가능하게 */
+    display: inline-block;  /* a태그는 인라인 가로세로 줄수없어서 인라인블록으로 변경 */
+    width: 150px;
+    height: 57px;
+    line-height: 57px; /* 한줄일때 세로 중앙정렬 */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 푸터(현재까지 없음 푸터도 복잡해지면 생김) --------------------------------------------------------------------------------------------------*/
+
+
+/* content 1단 레이어일때(세부내용은 각자의css에서) -------------------------------------------------------------------------------------------*/
+
+/* content 2단 레이어일때  -----------------------------------------------------------------------------------------------------------------*/
+/* aside > 제목 */
+#content aside>h2 {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #dddddd;
+    border: 1px solid #a6a6a6;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* aside > 항목 */
+#content aside>ul>li>a {  /* 클릭영역넓게하려고 */
+    display: inline-block;
+    width: 150px;   /* cals(100% - 10px);    box-sizing: border-box; */
+    height: 45px;
+    line-height: 45px;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
+    border: 1px solid #a6a6a6;
+    font-size: 15px;
+    text-align: left;
+}
+
+/* main 해더(제목+위치 box)*/
+#content main #main-top-box {
+    padding: 20px 0px 15px 0px;
+    border-bottom: 1px solid #a6a6a6;
+}
+/* main 해더(제목)*/
+#content main #main-top-box h3 {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* main 해더(위치)*/
+#content main #main-top-box #location {
+    float: right;
+}
+
+#content main #main-top-box #location ul {
+    padding: 10px 0px 0px 0px;
+    float: left;
+}
+
+#content main #main-top-box #location ul>li {
+    float: left;
+
+}
+
+#content main #main-top-box #location ul>li::after {
+    content: ">";
+    padding: 0px 5px 0px 5px;
+}
+
+#content main #main-top-box #location ul>li:last-child::after { /* 마지막에만 예외 */
+    content: "";
+    padding: 0px 0px 0px 0px;
+}
+
+/* 
+#content main #main-head-box #location ul>li:not(:last-child)::after {
+    content: ">";
+    margin: 0px 5px 0px 5px;
+}
+*/
+
+
+
+
+

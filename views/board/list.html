@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Mysite</title>
+
+    <link rel="stylesheet" href="../../assets/css/mysite.css">
+    <link rel="stylesheet" href="../../assets/css/board.css">
+
+</head>
+<body>
+    <div id="container">
+        <!-- header(로고+버튼, 네비게이션) -->
+        <header>
+            <div id="logo-util-box" class="clearfix">
+                <h1><a hef="">MySite</a></h1>
+                
+                <!--
+                <ul>
+                    <li ><a href="" >로그인</a></li>
+                    <li ><a href="" >회원가입</a></li>
+                </ul>
+                 -->
+			    <ul>
+				    <li class="hello">황일영 님 안녕하세요^^</li>
+				    <li><a href="" class="btn_s">로그아웃</a></li>
+				    <li><a href="" class="btn_s">회원정보수정</a></li>
+			    </ul>
+               
+            </div>
+            <nav>
+                <ul class="clearfix">
+                    <li><a href="">입사지원서</a></li>
+                    <li><a href="">게시판</a></li>
+                    <li><a href="">갤러리</a></li>
+                    <li><a href="">방명록</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header(로고+버튼, 네비게이션) -->
+        
+        <!-- 본문 -->
+        <div id="content"  class="clearfix">
+
+            <!-- //aside -->
+            <aside>
+                <h2>게시판</h2>
+                <ul>
+                    <li><a href="">일반게시판</a></li>
+                    <li><a href="">댓글게시판</a></li>
+                </ul>
+            </aside>
+            <!-- //aside -->
+
+            <main id="board">
+                
+                <div id="main-top-box" class="clearfix">
+					<h3>일반게시판</h3>
+					<div id="location">
+						<ul class="clearfix">
+							<li>홈</li>
+                            <li>게시판</li>
+                            <li>일반게시판</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //main-top-box -->
+
+                <div id="board-list">
+                    
+                    <div id="serach-box" class="clearfix">
+                        <form class="search-wrap" action="" method="">
+                            <input type="text" id="text-keyword" name="">
+                            <button type="submit" id="btn-search" >검색</button>
+                        </form>
+
+                        <div class="btn-wrap">
+                            <a id="btn-writeForm" href="" > 글쓰기</a>
+                        </div>
+                    </div>    
+
+                    <table >
+                        <colgroup>
+                            <col style="width: 8%;">
+                            <col>
+                            <col style="width: 10%;">
+                            <col style="width: 10%;">
+                            <col style="width: 15%;">
+                            <col style="width: 10%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>글쓴이</th>
+                                <th>조회수</th>
+                                <th>작성일</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>123</td>
+                                <td class="text-left"><a href="#">게시판 게시글입니다.</a></td>
+                                <td>정우성</td>
+                                <td>1232</td>
+                                <td>2020-12-23</td>
+                                <td><a href="" class="btn-del">삭제</a></td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td class="text-left"><a href="#">게시판 게시글입니다.</a></td>
+                                <td>정우성</td>
+                                <td>1232</td>
+                                <td>2020-12-23</td>
+                                <td><a href="" class="btn-del">삭제</a></td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td class="text-left"><a href="#">게시판 게시글입니다.</a></td>
+                                <td>정우성</td>
+                                <td>1232</td>
+                                <td>2020-12-23</td>
+                                <td><a href="" class="btn-del">삭제</a></td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td class="text-left"><a href="#">게시판 게시글입니다.</a></td>
+                                <td>정우성</td>
+                                <td>1232</td>
+                                <td>2020-12-23</td>
+                                <td><a href="" class="btn-del">삭제</a></td>
+                            </tr>
+                            <tr class="last">
+                                <td>123</td>
+                                <td class="text-left"><a href="#">게시판 게시글입니다.</a></td>
+                                <td>정우성</td>
+                                <td>1232</td>
+                                <td>2020-12-23</td>
+                                <td><a href="" class="btn-del">삭제</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div id="paging">
+                        <ul class="clearfix">
+                            <a href=""><li>◀</li></a>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href="" class="active">5</a></li>
+                            <li><a href="">6</a></li>
+                            <li><a href="">7</a></li>
+                            <li><a href="">8</a></li>
+                            <li><a href="">9</a></li>
+                            <li><a href="">10</a></li>
+                            <li><a href="">▶</a></li>
+                        </ul>
+                        
+                    </div>
+
+                </div>    
+                <!-- //board-list -->
+
+
+                <div id="main-bottom-box">
+
+                </div>    
+                 <!-- //main-bottom-box -->
+            </main>
+            
+        </div>
+        <!-- //본문 -->
+
+        <!-- 푸터 -->
+        <footer>
+            Copyright ⓒ 2023 황일영. All right reserved
+        </footer>
+        <!-- //푸터 -->
+    </div>
+
+</body>
+</html>
