@@ -1,0 +1,55 @@
+<!-- 해더   -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <style>
+        .header-container { padding: 5px; background-color: ffffff; }
+
+        .header-container header { width: 1000px; margin: 0 auto; border: 1px solid #ffffff; }
+       
+        /*
+        a:visited   ==> 1+10 = 11
+        #header-container header h1 ==> 100 + 1 + 1 = 102
+        */
+        .header-container #header h1 { float: left; margin-left:-4px; color: aquamarine; font-size: 40px; font-weight: bold; }
+        .header-container #header .links { float: right; }
+        .header-container #header ul { color: #ffffff; } 
+        .header-container #header ul>li { float: left; padding: 9px 0px 0px 0px; margin-left: 5px; }
+        .header-container #header ul>li.hello { padding: 13px 0px 0px  }
+
+        
+        .btn_s {    
+            display: inline-block;   /* a태그는 인라인 상하패딩이 겹친다->inline-block */
+            padding: 5px 10px 5px 10px; /* 클릭영역 넓어짐 */
+            background-color: #f3f3f3;
+            border: 1px solid #a6a6a6; 
+            border-radius: 2px; 
+            font-size: 12px; 
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- 전체컨테이너 가운데 정렬용 -->
+<div class="header-container">
+    <header id="header" class="clearfix">
+        <h1><a href="#">MySite</a></h1>
+        <div class="links">
+            <ul>
+                <li class="hello">황일영 님 안녕하세요</li>
+				<li><a href="" class="btn_s">로그아웃</a></li>
+				<li><a href="" class="btn_s">회원정보수정</a></li>
+            </ul>
+        </div>
+    </header>
+</div>
+
+
+
+</body>
+</html>
